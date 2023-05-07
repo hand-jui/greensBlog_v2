@@ -12,5 +12,11 @@ public class UserController {
 
 		return "main";
 	}
+	
+	@GetMapping("/write")
+	public String writePage() {
+		
+		return "write";
+	}
 
 }
