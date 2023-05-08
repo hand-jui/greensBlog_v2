@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/view/layout/header.jsp"%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 
 <section>
 
@@ -21,23 +21,35 @@
 		</select>
 	</div>
 
-	<div>Editor 활용 쓸줄몰라~</div>
-
 	<div>
-		<div>
-			<button>취소</button>
-		</div>
+		<form method="post">
+			<textarea id="summernote" name="editordata"></textarea>
+		</form>
+			<div>
+				<button>취소</button>
 
-		<div>
-			<button>등록</button>
-			<button>수정</button>
-		</div>
+				<button>등록</button>
+				<button>수정</button>
 
+			</div>
 	</div>
 
 
 
+
 </section>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#summernote').summernote({
+			height : 300,
+			minHeight : null,
+			maxHeight : null,
+			focus : true,
+			lang : "ko-KR",
+			placeholder : "글을 작성해 주세요"
+		});
+	});
+</script>
 
 
 </body>
